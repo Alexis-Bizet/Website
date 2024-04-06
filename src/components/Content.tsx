@@ -1,4 +1,4 @@
-import { Grid, Typography, Button, Fade, Box, useTheme } from "@mui/material";
+import { Grid, Typography, Button, Fade, Box, useTheme, Link } from "@mui/material";
 import { useState } from "react";
 import Project from "./Project";
 import ProjectContent from "./ProjectContent";
@@ -9,6 +9,7 @@ type Project = {
     name: string;
     description: string;
     image: string;
+    gitHub: string;
 };
 
 function Content() {
@@ -95,6 +96,11 @@ function Content() {
                         minHeight: imgMinHeight,
                     }}
                 />
+                </Fade>
+                <Fade in={checked} timeout={500}>
+                <Link href={selectedProject?.gitHub} target="_blank" sx={{color:'#fafafa', marginTop:'20px', cursor:'pointer'}}>
+                    Code disponible sur GitHub
+                </Link>
                 </Fade>
             </Box>
         </Box>
