@@ -53,8 +53,15 @@ function Content() {
                     <Project />
                 </Grid>
                 {ProjectContent.map((project) => (
-                    <Grid item xs={6} sm={6} md={4} lg={3} xl={2} key={project.id} sx={{textAlign:'center'}}>
-                        <Button variant="text" sx={{ color: '#fafafa' }} onClick={() => handleProjectClick(project)}>{project.name}</Button>                
+                    <Grid item xs={6} sm={6} md={4} lg={3} xl={2} key={project.id} sx={{textAlign:'center', marginTop:"20px"}}>
+                        <Button variant="text" 
+                        sx={{ 
+                            color: '#fafafa', 
+                            boxShadow: '0px 4px 4px #6a1b9a' 
+                            }} 
+                            onClick={() => handleProjectClick(project)}>
+                                {project.name}
+                        </Button>                
                     </Grid>
                 ))}
             </Grid>
