@@ -98,9 +98,15 @@ function Content() {
                 />
                 </Fade>
                 <Fade in={checked} timeout={500}>
-                <Link href={selectedProject?.gitHub} target="_blank" sx={{color:'#fafafa', marginTop:'20px', cursor:'pointer'}}>
-                    Code disponible sur GitHub
-                </Link>
+                    <Link href={selectedProject?.gitHub} target="_blank" 
+                        sx={{
+                            color:'#fafafa', 
+                            textDecoration: 'none', 
+                            marginTop:'20px', 
+                            cursor:'pointer', 
+                            borderBottom:'4px solid #6a1b9a'}}>
+                            Code disponible sur GitHub 
+                    </Link>
                 </Fade>
             </Box>
         </Box>
