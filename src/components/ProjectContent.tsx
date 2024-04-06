@@ -9,7 +9,7 @@ const ProjectContent = [
     { 
         id: 2, 
         name: "GoodFood", 
-        description: "C'est un projet clé réalisé pour mon diplôme de Développeur Web et Web Mobile. En collaboration avec quatre collègues, j'ai principalement travaillé sur le développement FrontEnd en utilisant React, tandis que Symfony a été utilisé pour le BackEnd.",
+        description: "C'est un projet clé réalisé pour mon diplôme de Développeur Web et Web Mobile. En collaboration avec quatre collègues, j'ai principalement travaillé sur le développement FrontEnd en utilisant React, tandis que Symfony a été utilisé pour le BackEnd. Il s'agit d'un site de livre de recette, on peut voir différentes recettes bonnes pour la santé, mais également en ajouter nous même en se créant un compte.",
         image: "/goodfood.png"
  
     },

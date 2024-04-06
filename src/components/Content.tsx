@@ -30,9 +30,10 @@ function Content() {
     const isLg = useMediaQuery(theme.breakpoints.between('lg', 'xl'));
     const isXl = useMediaQuery(theme.breakpoints.up('xl'));
     
-    let imgWidth;
+    let imgWidth, imgMinHeight;
     if (isXs) {
         imgWidth = '270px';
+        imgMinHeight = '200px';
     } else if (isSm) {
         imgWidth = '500px';
     } else if (isMd) {
@@ -41,6 +42,7 @@ function Content() {
         imgWidth = '700px';
     } else if (isXl) {
         imgWidth = '800px';
+        imgMinHeight = '400px';
     }
 
     return (
@@ -89,7 +91,8 @@ function Content() {
                 <img src={selectedProject?.image} alt={selectedProject?.name} 
                     style={{
                         borderRadius:'15px', 
-                        width: imgWidth
+                        width: imgWidth,
+                        minHeight: imgMinHeight,
                     }}
                 />
                 </Fade>
