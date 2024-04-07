@@ -1,11 +1,10 @@
-import { Box, Grid, Link, Fade, Typography, CardMedia, CardContent, Card} from '@mui/material';
+import { Box, Grid, Link, Typography, CardMedia, CardContent, Card} from '@mui/material';
 
-export default function Cards(selectedProject: any, checked: boolean) {
+export default function Cards(selectedProject: any) {
 
     const content = selectedProject.selectedProject;
 
   return (
-    <Fade in={checked} timeout={500}>
     <Card sx={{ maxWidth: 800, marginTop:5 }}>
         <Grid container>
           <Grid item xs={12} sm={7}>
@@ -67,6 +66,5 @@ export default function Cards(selectedProject: any, checked: boolean) {
           </Grid>
         </Grid>
     </Card>
-    </Fade>
   );
 }
