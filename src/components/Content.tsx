@@ -64,7 +64,7 @@ function Content() {
                 ))}
             </Grid>
             <Fade in={checked} timeout={500}>
-                <Card sx={{ maxWidth: 800, marginTop:5 }}>
+                <Card sx={{ maxWidth: 800, marginTop:5, marginBottom:5 }}>
                     <Grid container>
                         <Grid item xs={12} sm={7}>
                             <CardMedia
@@ -73,7 +73,7 @@ function Content() {
                                 alt="cocktail"
                             />
                         </Grid>
-                        <Grid item xs={12} sm={5} sx={{display:'flex', flexDirection:'column'}}>
+                        <Grid item xs={12} sm={5} sx={{display:'flex', flexDirection:'column', marginBottom:2}}>
                             <Typography 
                                 variant="h5" 
                                 component="div" 
@@ -123,7 +123,7 @@ function Content() {
                                     }
                                 }}
                             >
-                                <Link href={selectedProject?.gitHub} sx={{color:'black', borderBottom:'2px solid #6a1b9a'}}>
+                                <Link href={selectedProject?.gitHub} sx={{color:'black', borderBottom:'2px solid #6a1b9a',}}>
                                     Code disponible sur GitHub
                                 </Link>
                             </Box>
