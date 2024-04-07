@@ -6,7 +6,7 @@ import EmailIcon from '@mui/icons-material/Email';
 
 function Header() {
     return (
-            <Grid container alignItems="center">
+            <Grid container alignItems="center" sx={{height:'20vh'}}>
                 <Grid item xs={6} >
                     <Typography variant="h5">Alexis Bizet</Typography>
                 </Grid>

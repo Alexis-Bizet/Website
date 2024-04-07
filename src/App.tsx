@@ -5,7 +5,7 @@ import Content from './components/Content'
 function App() {
 
   return (
-      <Box sx={{ margin: 5}}>
+      <Box sx={{ margin: 5, height:'100vh'}}>
         <Header />
         <Content />
       </Box>
