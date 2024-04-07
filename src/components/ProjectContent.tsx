@@ -6,7 +6,7 @@ const ProjectContent = [
         description: "Ceci est l'un de mes premiers projets qui m'a permis d'acquérir une compréhension de JavaScript. Le projet consiste en une application interactive qui génère une image de chat à chaque fois qu'un utilisateur appuie sur un bouton.",
         image: "/catGenerator.png",
         gitHub:'https://github.com/Alexis-Bizet/cat_generator',
-        languages: ['Javascript', 'Html', 'Css']
+        languages: ['Javascript', 'HTML', 'CSS']
 
     },
     { 
@@ -39,7 +39,7 @@ const ProjectContent = [
         description: "Il s'agit d'un site web inspiré d'un Pokédex, regroupant toute la première génération de Pokémon. Le site a été entièrement développé en PHP, me permettant de mettre en pratique le modèle MVC (Modèle-Vue-Contrôleur).",
         image: "/Pokedex.png",
         gitHub:'https://github.com/Alexis-Bizet/PokedexApp',
-        languages: ['PHP', 'CSS', 'HTML']
+        languages: ['PHP', 'Bootstrap', 'HTML']
  
     },
 ];
