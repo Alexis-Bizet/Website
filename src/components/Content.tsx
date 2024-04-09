@@ -36,7 +36,7 @@ function Content() {
                 </Grid>
                 {ProjectContent.map((project) => (
                     <Grid 
-                        item xs={6} sm={6} md={4} lg={3} xl={2} 
+                        item xs={6} sm={4} md={4} lg={3} xl={2} 
                         key={project.id} 
                         sx={{
                             textAlign:'center', 
@@ -64,16 +64,16 @@ function Content() {
                 ))}
             </Grid>
             <Fade in={checked} timeout={500}>
-                <Card sx={{ maxWidth: 800, marginTop:5, marginBottom:5 }}>
+                <Card sx={{ maxWidth: 500, marginTop:5, marginBottom:5 }}>
                     <Grid container>
-                        <Grid item xs={12} sm={7}>
+                        <Grid item xs={12} md={7}>
                             <CardMedia
                                 component="img"
                                 image={selectedProject?.image}
                                 alt="cocktail"
                             />
                         </Grid>
-                        <Grid item xs={12} sm={5} sx={{display:'flex', flexDirection:'column', marginBottom:2}}>
+                        <Grid item xs={12} md={5} sx={{display:'flex', flexDirection:'column', marginBottom:2}}>
                             <Typography 
                                 variant="h5" 
                                 component="div" 
@@ -92,27 +92,27 @@ function Content() {
                                     {selectedProject?.description}
                                 </Typography>
                             </CardContent>
-                            <Box sx={{display:"flex", justifyContent:'center'}}>
+                            <Grid container sx={{justifyContent:'center'}}>
                                 {selectedProject?.languages.map((language: string, index: number) => (
-                                    <Typography 
-                                        key={index} 
-                                        variant="body2" 
-                                        sx={{
-                                            backgroundColor:'#6a1b9a' , 
-                                            p:1,
-                                            marginTop:{
-                                                sm:1,
-                                                md:5,
-                                            },
-                                            ml:1, 
-                                            borderRadius:"15px", 
-                                            fontWeight:'bold'
-                                        }}
-                                    >
-                                        {language}
-                                    </Typography>
+                                    <Grid item xs={6} xl={4} lg={4} md={6} sm={6} key={index} sx={{textAlign:'center'}}>
+                                        <Typography variant="body2">
+                                            <Box 
+                                                component="span" 
+                                                sx={{ 
+                                                    display: 'inline-block', 
+                                                    borderRadius:"15px", 
+                                                    fontWeight:'bold', 
+                                                    backgroundColor:'#6a1b9a', 
+                                                    p: 1,
+                                                    marginTop:1
+                                                }}
+                                            >
+                                                {language}
+                                            </Box>
+                                        </Typography>
+                                    </Grid>
                                 ))}
-                            </Box>
+                            </Grid>
                             <Box 
                                 sx={{
                                     textAlign:'center',

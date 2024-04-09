@@ -42,6 +42,14 @@ const ProjectContent = [
         languages: ['PHP', 'Bootstrap', 'HTML']
  
     },
+    {
+        id: 6,
+        name: "ZenChat",
+        description: "ZenChat est un site web de chat en temps réel, développée avec la stack MERN. Elle m'a permis de comprendre le fonctionnement des bases de données en temps réel avec l'utilisation de socket.io.",
+        image: "/ZenChat.png",
+        gitHub: "https://github.com/Alexis-Bizet/ZenChat",
+        languages: ['React', 'NodeJs', 'MongoDB', "Express",'Socket.io']
+    }
 ];
 
 export default ProjectContent;
