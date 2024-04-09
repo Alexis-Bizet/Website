@@ -64,7 +64,7 @@ function Content() {
                 ))}
             </Grid>
             <Fade in={checked} timeout={500}>
-                <Card sx={{ maxWidth: 500, marginTop:5, marginBottom:5 }}>
+                <Card sx={{ maxWidth: 800, marginTop:5, marginBottom:5 }}>
                     <Grid container>
                         <Grid item xs={12} md={7}>
                             <CardMedia
