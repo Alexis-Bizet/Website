@@ -1,5 +1,13 @@
+export type ProjectType = {
+    id: number;
+    name: string;
+    description: string;
+    image: string;
+    gitHub: string;
+    languages: string[];
+};
 
-const ProjectContent = [
+const ProjectContent: ProjectType[] = [
     { 
         id: 1, 
         name: "catGenerator", 

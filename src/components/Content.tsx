@@ -1,23 +1,19 @@
-import { Grid, Button, Box, useTheme, Fade, Card, CardMedia, Typography, CardContent, Link } from "@mui/material";
+import { Grid, Box, useTheme, Fade, Card, CardMedia, Typography, CardContent, Link } from "@mui/material";
 import { useState } from "react";
 import Project from "./Project";
-import ProjectContent from "./ProjectContent";
+import ProjectContent from "./Data/ProjectContent";
+import { ProjectType } from './Data/ProjectContent'; 
 import useMediaQuery from '@mui/material/useMediaQuery';
-  
-type Project = {
-    id: number;
-    name: string;
-    description: string;
-    image: string;
-    gitHub: string;
-    languages: string[];
-};
+import ButtonProject from "./Buttons/ButtonProject";
+import MenuButton from "./Buttons/MenuButton";  
+
+
 
 function Content() {
     const [selectedProject, setSelectedProject] = useState(ProjectContent.find(project => project.name === 'catGenerator'));
     const [checked, setChecked] = useState(true);
 
-    const handleProjectClick = (project: Project) => {
+    const handleProjectClick = (project: ProjectType) => {
         setChecked(false);
         setTimeout(() => {
             setSelectedProject(project);
@@ -27,6 +23,7 @@ function Content() {
 
     const theme = useTheme();
     const isXs = useMediaQuery(theme.breakpoints.between('xs', 'sm'));
+    const isSmOrLarger = useMediaQuery(theme.breakpoints.up('sm'));
 
     return (
         <Box sx={{display:'flex', flexDirection:'column', alignItems:'center'}}>
@@ -34,34 +31,19 @@ function Content() {
                 <Grid item xs={12} sx={{ textAlign:'center'}}>
                     <Project />
                 </Grid>
-                {ProjectContent.map((project) => (
-                    <Grid 
-                        item xs={6} sm={4} md={4} lg={3} xl={2} 
-                        key={project.id} 
-                        sx={{
-                            textAlign:'center', 
-                            mt: {
-                                xs: '10px',
-                                sm: '10px',
-                                md: '20px',
-                                lg: '20px',
-                                xl: '40px',
-                            }
-                        }}
-                    >
-                        <Button 
-                            variant="text"         
-                            size={isXs ? 'small' : 'medium'}
-                            sx={{ 
-                                color: '#fafafa', 
-                                boxShadow: '0px 4px 4px #6a1b9a' 
-                            }} 
-                            onClick={() => handleProjectClick(project)}
-                        >
-                            {project.name}
-                        </Button>                
-                    </Grid>
-                ))}
+                {isSmOrLarger ? (
+                    <ButtonProject 
+                        ProjectContent={ProjectContent}
+                        isXs={isXs}
+                        handleProjectClick={handleProjectClick}
+                    />
+                ) : (
+                    <MenuButton 
+                        projects={ProjectContent}
+                        handleProjectClick={handleProjectClick}
+                        selectedProject={selectedProject}
+                    />
+                )}
             </Grid>
             <Fade in={checked} timeout={500}>
                 <Card sx={{ 
@@ -112,7 +94,8 @@ function Content() {
                                                     fontWeight:'bold', 
                                                     backgroundColor:'#6a1b9a', 
                                                     p: 1,
-                                                    marginTop:1
+                                                    marginTop:1,
+                                                    width:'85px'
                                                 }}
                                             >
                                                 {language}
