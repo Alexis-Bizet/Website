@@ -70,6 +70,7 @@ function Content() {
                                 justifyContent:'center',
                                 alignItems:'center',
                                 marginBottom:{
+                                    xs:2,
                                     sm:2
                                 }
                                 }}

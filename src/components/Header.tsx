@@ -2,13 +2,16 @@ import { Grid, Typography, Link} from '@mui/material';
 import GitHubIcon from '@mui/icons-material/GitHub';
 import LinkedInIcon from '@mui/icons-material/LinkedIn';
 import EmailIcon from '@mui/icons-material/Email';
+import cv from '../../public/Alexis-Bizet.pdf';
 
 
 function Header() {
     return (
             <Grid container alignItems="center" sx={{height:'20vh'}}>
                 <Grid item xs={6} >
-                    <Typography variant="h5">Alexis Bizet</Typography>
+                    <Link href={cv} download>
+                        <Typography variant="h5">Alexis Bizet</Typography>
+                    </Link>                
                 </Grid>
                 <Grid container xs={6} justifyContent="flex-end" spacing={1}>
                     <Grid item>
