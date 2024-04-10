@@ -23,7 +23,7 @@ function Content() {
 
     const theme = useTheme();
     const isXs = useMediaQuery(theme.breakpoints.between('xs', 'sm'));
-    const isSmOrLarger = useMediaQuery(theme.breakpoints.up('sm'));
+    const isSmOrLarger = useMediaQuery(theme.breakpoints.up('md'));
 
     return (
         <Box sx={{display:'flex', flexDirection:'column', alignItems:'center'}}>
@@ -63,7 +63,17 @@ function Content() {
                                 alt="cocktail"
                             />
                         </Grid>
-                        <Grid item xs={12} md={5} sx={{display:'flex', flexDirection:'column', marginBottom:2}}>
+                        <Grid item xs={12} md={5} 
+                            sx={{
+                                display:'flex', 
+                                flexDirection:'column', 
+                                justifyContent:'center',
+                                alignItems:'center',
+                                marginBottom:{
+                                    sm:2
+                                }
+                                }}
+                        >
                             <Typography 
                                 variant="h5" 
                                 component="div" 
