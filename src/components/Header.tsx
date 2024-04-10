@@ -2,8 +2,7 @@ import { Grid, Typography, Link} from '@mui/material';
 import GitHubIcon from '@mui/icons-material/GitHub';
 import LinkedInIcon from '@mui/icons-material/LinkedIn';
 import EmailIcon from '@mui/icons-material/Email';
-import cv from '../../public/Alexis-Bizet.pdf';
-
+import cv from '/Alexis-Bizet.pdf';
 
 function Header() {
     return (
